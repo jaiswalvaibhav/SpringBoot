@@ -3,12 +3,10 @@ package com.springboot.ems_backend.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity //Tells JPA to map this class to a db table
 @Table(name = "employees") //to specify the table details; If not present, hibernate uses the class name
@@ -36,4 +34,5 @@ public class Employee {//POJO
 
     @Column(name = "email_id", nullable = false, unique = true) //email is mandatory and should be unique for all employees
     private String email;
+
 }
